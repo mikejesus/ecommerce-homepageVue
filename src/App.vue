@@ -23,7 +23,7 @@
         <!-- Categories Component End -->
 
       <!-- Product Component Section -->
-        <div class="col-lg-9 my-3">
+        <div class="col-md-9 my-3">
           <h4>Our Products</h4>
           <div class="row">
             <ProductList v-for="product in productList" :products="product" :key="product.id" />
