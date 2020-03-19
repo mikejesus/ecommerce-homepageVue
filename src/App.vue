@@ -6,7 +6,7 @@
     <div class="container mt-5 py-3">
       <!-- Carousel Slider -->
       <div class="row">
-        <carousel :per-page="1" :mouse-drag="false" :autoplay="true" :loop="true" :navigationEnabled="true" :ease="ease" :speed="30">
+        <carousel :per-page="1" :mouse-drag="false" :autoplay="true" :loop="true" :navigationEnabled="true" :speed="30">
           <slide v-for="image in sliders" :key="image.id">
              <img style="margin-top: ; width: 100%; height: 450px" :src="image.imgName" alt="">
           </slide>
@@ -32,13 +32,8 @@
       <!-- Product Component End -->
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="py-4 bg-danger">
-      <div class="container">
-        <p class="m-0 text-center text-white">Made with &#9829; by Michael S. Olawuni.</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+  
+  <Footer />
   </div>
 </template>
 
@@ -47,6 +42,7 @@
 import Header from "./components/Header.vue";
 import Category from "./components/Category.vue";
 import ProductList from "./components/ProductList.vue";
+import Footer from "./components/Footer.vue";
 import { Carousel, Slide } from "vue-carousel";
 
 export default {
@@ -56,11 +52,32 @@ export default {
     Header,
     Category,
     ProductList,
+    Footer,
     Carousel,
     Slide
   },
   data() {
     return {
+      footerItems:[
+        {
+          help:[
+          {
+            name: "Test 1"
+          },
+          {
+            name: "Test 2"
+          },
+          ],
+          about: [
+            {
+              name: "about 1"
+            },
+            {
+              name: "about 2"
+            },
+          ]
+        }
+      ],
       productList: [
         {
           name: "Jollof Rice",
