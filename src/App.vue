@@ -6,11 +6,13 @@
     <div class="container mt-5 py-3">
       <!-- Carousel Slider -->
       <div class="row">
-        <carousel :per-page="1" :mouse-drag="false" :autoplay="true" :loop="true" :navigationEnabled="true" :speed="30">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+        <carousel :per-page="1" :mouse-drag="false" :autoplay="true" :loop="true" :navigationEnabled="true">
           <slide v-for="image in sliders" :key="image.id">
              <img style="margin-top: ; width: 100%; height: 450px" :src="image.imgName" alt="">
           </slide>
         </carousel>
+        </div>
         </div>
       <!-- Carousel Slider End -->
 
