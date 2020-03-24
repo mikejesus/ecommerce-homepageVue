@@ -4,11 +4,13 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
-import router from './router'
+import router from './router.js'
+import store from './store'
 
 Vue.config.productionTip = false
 
 new Vue({
+    store,
     router,
     render: h => h(App),
 }).$mount('#app')

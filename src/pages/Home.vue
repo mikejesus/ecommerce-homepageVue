@@ -26,11 +26,41 @@
           <h4>Our Products</h4>
           <div class="row"> -->
             
-            <ProductList />
+            <!-- <ProductList /> -->
             
           <!-- </div>
         </div> -->
       <!-- Product Component End -->
+       <div class="col-md-9 my-3">
+          <h4>Our Products</h4>
+          <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4" v-for="product in allProducts" :key="product.id">
+              
+            <div class="card h-90 my-4" >
+            <img class="card-img-top" :src="product.productImageLink" :alt="product.name" height="200" >
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#"  @click="fetchProductDetail(product)">{{product.name}}</a>
+                </h4>
+                <h5>&#8358;{{product.price}}</h5>
+                <!-- <p class="card-text">Lorem ipsum dolor si amet, consectetur adipisicing elit. Amet numquam aspernatur!</p> -->
+              <button class="btn btn-block py-2 btn-primary" @click="fetchProductDetail(product)">Buy Now</button>
+              </div>
+              <!-- <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div> -->
+              
+            </div>
+          </div>
+
+          </div>
+     </div>
+        <!-- /.row -->
+
+
+      <!-- /.col-lg-9 -->
+
       </div>
     </div>
   
@@ -43,44 +73,35 @@
 // import HelloWorld from './components/HelloWorld.vue'
 
 import Category from "@/components/Category.vue";
-import ProductList from "@/components/ProductList.vue";
+// import ProductList from "@/components/ProductList.vue";
 
 import { Carousel, Slide } from "vue-carousel";
 
 
 export default {
   name: "App",
+  computed: {
+    allProducts(){
+      return this.$store.state.productList
+    }
+  },
+   methods: {
+    fetchProductDetail(product) {
+      this.$store.commit("setSelectedProductValue", product);
+      this.$router.push({ path: "/product-details" });
+    }
+  },
   components: {
     // HelloWorld
     Category,
-    ProductList,
+    // ProductList,
     Carousel,
     Slide,
     
   },
+
   data() {
     return {
-      footerItems:[
-        {
-          help:[
-          {
-            name: "Test 1"
-          },
-          {
-            name: "Test 2"
-          },
-          ],
-          about: [
-            {
-              name: "about 1"
-            },
-            {
-              name: "about 2"
-            },
-          ]
-        }
-      ],
-      
       categories: [
         {
           id: 1,
@@ -114,6 +135,22 @@ export default {
   
 };
 </script>
-<style>
+<style scoped>
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
 
+.card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+.card-body .card-title {
+  margin-bottom: calc(10% + 5px);
+  transition: 1.5s ease;
+}
+.card:hover .card-body .card-title {
+  margin-bottom: .5rem;
+}
+.card-height{
+  height: auto;
+}
 </style>

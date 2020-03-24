@@ -26,6 +26,12 @@ const routes = [{
         component: ProductDetail,
         props: true
     },
+    {
+        path: '/product-details',
+        name: 'Details',
+        component: ProductDetail
+    },
+
 
 ]
 
