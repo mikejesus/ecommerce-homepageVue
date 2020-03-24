@@ -3,7 +3,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top py-3">
       <div class="container">
-        <a class="navbar-brand " href="#">Order & Chop World</a>
+        <a class="navbar-brand " href="/">Order & Chop World</a>
         <button
           class="navbar-toggler"
           type="button"
