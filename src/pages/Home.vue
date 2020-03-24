@@ -1,7 +1,5 @@
 <template>
-  <div>
-  <Header />
-    
+  <div>    
     <div class="container mt-5 py-3">
       <!-- Carousel Slider -->
       <div class="row">
@@ -36,28 +34,26 @@
       </div>
     </div>
   
-  <Footer />
+  
   </div>
 
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Header from "@/components/Header.vue";
+
 import Category from "@/components/Category.vue";
 import ProductList from "@/components/ProductList.vue";
-import Footer from "@/components/Footer.vue";
+
 import { Carousel, Slide } from "vue-carousel";
 
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
-    Header,
+    // HelloWorld
     Category,
     ProductList,
-    Footer,
     Carousel,
     Slide,
     

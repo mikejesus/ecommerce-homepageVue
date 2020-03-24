@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div class="container py-4">
+  <Header />
     <div class="row">
       <div class="col-md-4">
            
@@ -30,10 +31,11 @@
 </template>
 
 <script>
-
+import Header from '@/components/Header'
 export default {
   name: "prod_details",
-  props: ["details"]
+  props: ["details"],
+  component: { Header }
 }
 </script>
 
