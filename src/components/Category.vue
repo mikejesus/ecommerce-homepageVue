@@ -22,7 +22,8 @@ export default {
   margin-bottom: 5px;
 }
 .list-group-item:hover{
-  background-color: lightblue;
+  background-color: #007bff;
+  color: white;
 }
 
 </style>

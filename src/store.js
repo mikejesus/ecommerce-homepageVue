@@ -15,9 +15,9 @@ const store = new Vuex.Store({
                 price: 500.0,
                 categoryId: 2,
                 productImageLink: require("@/assets/images/rice1.jpeg"),
-                otherImageLink1: require("@/assets/images/rice1.jpeg"),
-                otherImageLink2: require("@/assets/images/rice1.jpeg"),
-                otherImageLink3: require("@/assets/images/rice1.jpeg"),
+                otherImageLink1: require("@/assets/images/jollof.jpg"),
+                otherImageLink2: require("@/assets/images/jollof2.jpg"),
+                otherImageLink3: require("@/assets/images/jollof3.jpeg"),
                 description: "This is african jollof rice with a difference. You can get it by just a button click"
             },
             {
